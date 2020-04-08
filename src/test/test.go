@@ -34,6 +34,8 @@ func main() {
 	// 创建producer()函数的并发goroutine
 	go producer("cat", channel)
 	go producer("dog", channel)
+	go producer("cat1", channel)
+	go producer("dog1", channel)
 	// 数据消费函数
 	customer(channel)
 }
